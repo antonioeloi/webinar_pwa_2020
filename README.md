@@ -1,2 +1,2 @@
-# webinar_pwa_2020
- Repository to start practical guide
+Demo PWA.
+MC 2020 - DEI UC 
