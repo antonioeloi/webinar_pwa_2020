@@ -15,7 +15,7 @@ async function getPWANews() {
     // Result json
     const json = await res.json();
 
-    // Now that we ahve the json response we can add it to the page
+    // Now that we have the json response we can add it to the page
     const main = document.querySelector('main');
     json.articles.forEach(article => {
         const el = document.createElement('news-article');
