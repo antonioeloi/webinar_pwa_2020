@@ -4,7 +4,8 @@ import { newsUrl } from './newsApi.js';
 import './news-article.js';
 
 window.addEventListener('load', () => {
-    getPWANews(); 
+    getPWANews();
+    registerSW();
 });
 
 // Method to retrieve articles from API (async)
@@ -21,4 +22,16 @@ async function getPWANews() {
         el.article = article;
         main.appendChild(el);
     });
+}
+
+// Method to register service worker
+async function registerSW() {
+    if ('serviceWorker' in navigator) { // verify if browser supports sw
+        // Call serviceWorker.register on our navigator object passing the sw file
+        try {
+            await navigator.serviceWorker.register('./sw.js');
+        } catch (e) {
+            console.log("SW registration failed");
+        }
+    }
 }
