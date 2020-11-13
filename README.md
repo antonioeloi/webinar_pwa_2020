@@ -54,6 +54,11 @@ Falta apenas dar import no **ficheiro index.js**.
 import './news-article.js';
 ```
 
+**Nota importante**
+
+Dada a limitação da conta gratuita da [API](https://newsapi.org) é muito possível que tenham que alterar a _apiKey_ ou colocar uma data mais recente (último mês) na query, _newsUrl_.
+___
+
 Fazendo reload à página podemos ver que já temos notícias.
 
 ![Screenshot da webapp a funcinar](docs/desktop_webapp_news.png)
